@@ -1,10 +1,10 @@
-report 50127 "Employee Report"
+report 50128 "Employee Information"
 {
     ApplicationArea = All;
-    Caption = 'Employee Report';
+    Caption = 'Employee Information';
     UsageCategory = Administration;
     DefaultLayout = RDLC;
-    RDLCLayout = 'EmployeeReport.RDL';
+    RDLCLayout = 'Employee Payment.RDL';
 
     dataset
     {
@@ -13,6 +13,34 @@ report 50127 "Employee Report"
             column(Picture; Picture)
             {
             }
+            column(ContactPerson; "Contact Person")
+            {
+            }
+            column(City; City)
+            {
+            }
+            column(PhoneNo; "Phone No.")
+            {
+            }
+            column(Address; Address)
+            {
+            }
+            column(PostCode; "Post Code")
+            {
+            }
+            column(Name; Name)
+            {
+
+            }
+        }
+
+        dataitem("Employee Payment Header"; "Employee Payment Header")
+        {
+            column(Employee_No; "Employee No.") { }
+            column(Starting_Date; "Starting Date:") { }
+
+            column(Ending_Date; "Ending Date:") { }
+            column(Status; Status) { }
         }
     }
     requestpage
